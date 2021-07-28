@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useEffect } from "react";
+import Profile from "./Components/Profile/Profile";
 
 function App() {
+  const [isLoading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    try {
+      setLoading(true);
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((res) => {
+          setData(res);
+          setLoading(false);
+        })
+        .catch((e) => setLoading(false));
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isLoading ? (
+        <p>loading...</p>
+      ) : (
+        data.map((user, index) => (
+          <Profile
+            key={index.toString()}
+            name={user.name}
+            email={user.email}
+            phone={user.phone}
+          />
+        ))
+      )}
     </div>
   );
 }
