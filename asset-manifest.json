@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/StrideTask/static/css/main.130d7e1f.chunk.css",
+    "main.js": "/StrideTask/static/js/main.6cbe6ae9.chunk.js",
+    "main.js.map": "/StrideTask/static/js/main.6cbe6ae9.chunk.js.map",
+    "runtime-main.js": "/StrideTask/static/js/runtime-main.0199386e.js",
+    "runtime-main.js.map": "/StrideTask/static/js/runtime-main.0199386e.js.map",
+    "static/js/2.41552ea2.chunk.js": "/StrideTask/static/js/2.41552ea2.chunk.js",
+    "static/js/2.41552ea2.chunk.js.map": "/StrideTask/static/js/2.41552ea2.chunk.js.map",
+    "static/js/3.1490101e.chunk.js": "/StrideTask/static/js/3.1490101e.chunk.js",
+    "static/js/3.1490101e.chunk.js.map": "/StrideTask/static/js/3.1490101e.chunk.js.map",
+    "index.html": "/StrideTask/index.html",
+    "static/css/main.130d7e1f.chunk.css.map": "/StrideTask/static/css/main.130d7e1f.chunk.css.map",
+    "static/js/2.41552ea2.chunk.js.LICENSE.txt": "/StrideTask/static/js/2.41552ea2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0199386e.js",
+    "static/js/2.41552ea2.chunk.js",
+    "static/css/main.130d7e1f.chunk.css",
+    "static/js/main.6cbe6ae9.chunk.js"
+  ]
+}
