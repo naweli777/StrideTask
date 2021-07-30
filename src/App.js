@@ -1,42 +1,17 @@
+import React from "react";
+import {BrowserRouter,Switch,Route} from "react-router-dom"
 import "./App.css";
-import { useState, useEffect } from "react";
-import Profile from "./Components/Profile/Profile";
-
-function App() {
-  const [isLoading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    try {
-      setLoading(true);
-      fetch("https://jsonplaceholder.typicode.com/users")
-        .then((response) => response.json())
-        .then((res) => {
-          setData(res);
-          setLoading(false);
-        })
-        .catch((e) => setLoading(false));
-    } catch (error) {
-      setLoading(false);
-      console.log(error);
-    }
-  }, []);
+import Home from "./Components/Home/Home.jsx";
+import Todo from "./Components/ToDo/ToDo.jsx"
+const App = () => {
   return (
-    <div className="App">
-      {isLoading ? (
-        <p>loading...</p>
-      ) : (
-        data.map((user, index) => (
-          <Profile
-            key={index.toString()}
-            name={user.name}
-            email={user.email}
-            phone={user.phone}
-          />
-        ))
-      )}
-    </div>
+    <BrowserRouter>
+    <Switch>
+    <Route path="/" exact component={Home} />
+    <Route path="/user/:id" exact component={Todo} />
+    </Switch>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
