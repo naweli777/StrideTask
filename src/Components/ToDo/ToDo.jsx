@@ -16,7 +16,7 @@ const ToDo = () => {
     } catch (err) {
       console.log(err);
     }
-  }, []);
+  });
   return (
     <div>
       <ul>
